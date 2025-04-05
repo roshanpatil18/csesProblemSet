@@ -1,0 +1,1 @@
+{"name":"Local: p24","url":"c:\\Users\\rosha\\OneDrive\\Documents\\csesProblemSet\\searchingabdsorting\\p24.cpp","tests":[{"id":1743673605246,"input":"8\n2 5 1 4 8 3 2 5","output":"0 1 0 3 4 3 3 7"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\rosha\\OneDrive\\Documents\\csesProblemSet\\searchingabdsorting\\p24.cpp","group":"local","local":true}

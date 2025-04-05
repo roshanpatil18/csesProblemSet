@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    int n, t;
+    long long n, t;
     cin >> n >> t;
 
     vector<pair<int, int>> temp;
@@ -16,24 +16,26 @@ int main() {
 
     vector<int> ans;
 
-    for (int i = 0; i < n - 2; i++) { // `i` should start from 0
-        int l = i + 1, r = n - 1; // Two-pointer approach
-
-        while (l < r) {
-            int sum = temp[i].first + temp[l].first + temp[r].first;
+    for (int i = 0; i < n - 3; i++) {  // First number
+        for (int k = i + 1; k < n - 2; k++) {  // Second number
+            int l = k + 1, r = n - 1; // Third and fourth numbers (Two-pointer approach)
             
-            if (sum == t) {
-                ans = {temp[i].second, temp[l].second, temp[r].second};
-                sort(ans.begin(), ans.end());
-                for (int x : ans) cout << x << " ";
-                cout << endl;
-                return 0; // Exit immediately after finding the answer
-            } 
-            else if (sum > t) {
-                r--;
-            } 
-            else {
-                l++;
+            while (l < r) {
+                long long sum = temp[i].first + temp[k].first + temp[l].first + temp[r].first;
+
+                if (sum == t) {
+                    ans = {temp[i].second, temp[k].second, temp[l].second, temp[r].second};
+                    sort(ans.begin(), ans.end());
+                    for (int x : ans) cout << x << " ";
+                    cout << endl;
+                    return 0;  // Exit immediately after finding the answer
+                } 
+                else if (sum > t) {
+                    r--;  // Reduce sum by moving `r` left
+                } 
+                else {
+                    l++;  // Increase sum by moving `l` right
+                }
             }
         }
     }
