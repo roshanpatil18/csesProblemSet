@@ -1,0 +1,1 @@
+{"name":"Local: p4","url":"c:\\Users\\rosha\\OneDrive\\Documents\\csesProblemSet\\String\\p4.cpp","tests":[{"id":1746050718183,"input":"abcabcabc\n","output":"3 6 7\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\rosha\\OneDrive\\Documents\\csesProblemSet\\String\\p4.cpp","group":"local","local":true}
